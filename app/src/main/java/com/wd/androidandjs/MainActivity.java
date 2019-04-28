@@ -275,7 +275,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         *
         *
         * */
-
        webview.setWebChromeClient(new WebChromeClient(){
            @Override
            public boolean onJsConfirm(WebView view, String url, final String message, final JsResult result) {

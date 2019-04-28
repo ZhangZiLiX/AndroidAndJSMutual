@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8">
+      <title>安卓端编写的本地网页</title>
+
+      <script>
+         <!-- 编写android要调用JS的方法-->
+          function callAlertJS(){
+             <!--警告弹框-->
+             alert("Android调用了JS的callJS方法");
+
+          }
+
+          function callPromptJS(){
+             <!--提示弹框-->
+             alert("Android调用了提示弹框方法");
+          }
+
+          function callConfimJS(){
+             <!--确定弹框-->
+             alert("Android调用了确定弹框方法");
+          }
+
+
+          <!-- 编写JS 要调用android的方法-->
+          function callClassAndroid1(){
+            <!-- //第一种方法通过对象映射-->
+             // 由于对象映射，所以调用test对象等于调用Android映射的对象
+             Test.hello("JS使用第一种方法addJavaScriptInterface()调用andrioid的测试方法Test");
+
+          }
+
+       </script>
+
+  </head>
+
+
+
+  <body>
+     <!--//1 通过第一种方法  js调用Android
+         注意： 这里的onclick 点击事件，是你在上面定义的函数名
+     -->
+     <button type="button" id="button1" onclick="callClassAndroid1()">JsCallAndroid1</button>
+
+
+      <button id="button" onclick = "javascript:contact.toast('123')">haha</button>
+      <table border="0" width="100%" id="personTable" cellspacing="0">
+          <tr>
+              <td width="30%">姓名</td>
+              <td width="30%" align="center">存款</td>
+              <td align="center">电话</td>
+          </tr>
+      </table>
+  </body>
+
+
+</html>
